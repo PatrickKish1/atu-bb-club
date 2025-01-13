@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      @keyframes glow {
+        0% {
+          box-shadow: 0 0 5px #00ff00;
+        }
+        50% {
+          box-shadow: 0 0 20px #00ff00;
+        }
+        100% {
+          box-shadow: 0 0 5px #00ff00;
+        }
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(-45deg, #1a1a1a, #2a2a2a, #1a1a1a);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        font-family: "Arial", sans-serif;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem;
+        width: 80%;
+        max-width: 500px;
+        text-align: center;
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(45deg, #00ff00, #00ffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: #00ff00;
+      }
+
+      .qr-container {
+        background: white;
+        padding: 1rem;
+        border-radius: 10px;
+        display: inline-block;
+        margin: 1rem 0;
+        animation: glow 3s ease-in-out infinite;
+      }
+
+      .join-text {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        color: #00ff00;
+      }
+
+      .features {
+        display: flex;
+        justify-content: space-around;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+      }
+
+      .feature {
+        margin: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: rgba(0, 255, 0, 0.1);
+        border-radius: 15px;
+        border: 1px solid #00ff00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1 class="title">ATU BB CLUB</h1>
+      <p class="subtitle">Join Our Web3 Community!</p>
+
+      <div class="features">
+        <span class="feature">💎 NFTs</span>
+        <span class="feature">🌐 Web3</span>
+        <span class="feature">💲Cryptocurrency</span>
+        <span class="feature">🔗 Blockchain</span>
+        <span class="feature">🚀 Innovation</span>
+      </div>
+
+      <div class="qr-container">
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://chat.whatsapp.com/L9YvwB08kCU2stCM2JcthM"
+          alt="Join WhatsApp Group"
+          width="200"
+          height="200"
+        />
+      </div>
+
+      <p class="join-text">Scan to Join Our WhatsApp Community!</p>
+    </div>
+  </body>
+</html>
